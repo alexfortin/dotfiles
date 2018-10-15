@@ -1,4 +1,9 @@
 #!/bin/bash
+echo "Installing brew"
+xcode-select --install
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap caskroom/cask
+
 echo "Installing by brew"
 brew install tree
 brew install neovim
