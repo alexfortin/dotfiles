@@ -1,0 +1,14 @@
+[user]
+	email = alex.fortin@blackbaud.com
+	name = Blackbaud-AlexFortin
+[core]
+	editor = nvim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status -s
+[push]
+	default = current 
+[pull]
+    default = current
