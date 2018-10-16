@@ -13,6 +13,7 @@ brew install wget
 brew install azure-cli
 brew install tig
 brew install fasd
+brew install jenv
 brew install getantibody/tap/antibody
 brew cask install minikube
 brew cask install atom
