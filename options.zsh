@@ -1,3 +1,6 @@
+# Brew path
+export PATH=/usr/local/bin:$PATH
+
 # Completions
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
