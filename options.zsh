@@ -3,8 +3,7 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
-zstyle -e ':completion:*' special-dirs '[[ $PREFIX = (../)#(|.|..) ]] && reply=(..)'
-zstyle ':completion:*' force-list always
+zstyle ':completion:*' insert-tab false
 zmodload zsh/complist
 
 # History
@@ -16,11 +15,16 @@ HISTDUP=erase # Erase duplicates in the history file
 setopt histignoredups # Ignore duplicates
 
 # Options
-setopt autocd
+setopt auto_cd
+setopt cdable_vars
 setopt extendedglob
 setopt inc_append_history
 setopt share_history
 setopt append_history
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
+setopt pushdsilent
 
 # Use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char

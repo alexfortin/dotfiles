@@ -1,6 +1,4 @@
 mafredri/zsh-async
-clvv/fasd fasd
-rupa/z
 Tarrasch/zsh-bd
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions branch:develop
