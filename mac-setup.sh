@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Installing by brew"
+echo "Installing..."
 brew install git
 brew install tree
 brew install neovim
@@ -26,4 +26,7 @@ brew cask install spotify
 brew cask install karabiner-elements
 brew cask install bettertouchtool
 brew cask install alfred
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "Done"
+

@@ -25,6 +25,9 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 setopt pushdsilent
+setopt auto_list
+setopt auto_menu
+setopt always_to_end
 
 # Use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char
