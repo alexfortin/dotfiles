@@ -13,3 +13,6 @@ set autoindent
 set tabstop=4
 
 set timeoutlen=1000 ttimeoutlen=0
+set clipboard=unnamed
+
+set rtp+=/usr/local/opt/fzf
