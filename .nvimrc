@@ -1,6 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'ayu-theme/ayu-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 set termguicolors

@@ -1,6 +1,6 @@
 # Completions
 autoload -Uz compinit && compinit
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' insert-tab false
@@ -12,12 +12,23 @@ HISTFILESIZE=10000 # Number of commands to save in the file
 SAVEHIST=10000 # Number of history entries to save to disk
 HISTFILE=~/.zsh_history # Where to save history to disk
 HISTDUP=erase # Erase duplicates in the history file
+setopt hist_find_no_dups
+setopt histignoredups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt inc_append_history
+setopt no_beep
+setopt share_history
+setopt noclobber
 setopt histignoredups # Ignore duplicates
+bindkey "^R" history-incremental-search-backward
 
 # Options
+setopt interactivecomments
 setopt auto_cd
 setopt cdable_vars
-setopt extendedglob
+setopt extended_glob
+setopt menu_complete
 setopt inc_append_history
 setopt share_history
 setopt append_history
