@@ -11,6 +11,7 @@ colorscheme ayu
 set background=dark
 set autoindent
 set tabstop=4
+set backspace=indent,eol,start
 
 set timeoutlen=1000 ttimeoutlen=0
 set clipboard=unnamed
