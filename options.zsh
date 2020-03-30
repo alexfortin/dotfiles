@@ -2,7 +2,12 @@
 export PATH=/usr/local/bin:$PATH
 
 # Completions
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
@@ -68,4 +73,8 @@ export PATH=”$HOME/.jenv/bin:$PATH”
 
 bindkey -M viins '^?' backward-delete-char
 bindkey -M viins '^H' backward-delete-char
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 

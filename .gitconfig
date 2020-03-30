@@ -8,6 +8,8 @@
 	br = branch
 	ci = commit
 	st = status -s
+	ds = diff --staged
+	d = diff
 [push]
 	default = current 
 [pull]
