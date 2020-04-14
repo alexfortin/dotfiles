@@ -67,14 +67,8 @@ fi
 source "$fasd_cache"
 unset fasd_cache
 
-# jenv
-eval "$(jenv init -)"
-export PATH=”$HOME/.jenv/bin:$PATH”
-
 bindkey -M viins '^?' backward-delete-char
 bindkey -M viins '^H' backward-delete-char
 
-# nvm
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh --no-use"  # This loads nvm

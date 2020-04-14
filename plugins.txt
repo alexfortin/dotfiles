@@ -1,5 +1,4 @@
 mafredri/zsh-async
-Tarrasch/zsh-bd
 zsh-users/zsh-completions
 sindresorhus/pure
 junegunn/fzf

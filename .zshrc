@@ -1,6 +1,5 @@
-#zmodload zsh/zprof
+# zmodload zsh/zprof
 eval $(docker-machine env blackbaud)
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 source ~/.zsh_plugins.sh
 source ~/dotfiles/alias.zsh
@@ -11,4 +10,4 @@ source ~/dotfiles/options.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-#zprof
+# zprof
