@@ -11,3 +11,4 @@ alias b='bd'
 alias mk='minikube'
 alias dn='dotnet'
 alias deleteBranches='git branch | grep -v "master" | xargs git branch -D'
+

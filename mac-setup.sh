@@ -29,5 +29,6 @@ brew cask install bettertouchtool
 brew cask install alfred
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+npm install --global pure-prompt
 echo "Done"
 

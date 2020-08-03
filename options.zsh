@@ -1,12 +1,13 @@
-# Brew path
 export PATH=/usr/local/bin:$PATH
 
 # Completions
-autoload -Uz compinit
+autoload -Uz compinit promptinit; promptinit
 for dump in ~/.zcompdump(N.mh+24); do
   compinit
 done
 compinit -C
+
+prompt pure
 
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 zstyle ':completion:*' menu select
@@ -30,6 +31,7 @@ setopt share_history
 setopt noclobber
 setopt histignoredups # Ignore duplicates
 bindkey "^R" history-incremental-search-backward
+unsetopt nomatch
 
 # Options
 setopt interactivecomments
@@ -70,5 +72,5 @@ unset fasd_cache
 bindkey -M viins '^?' backward-delete-char
 bindkey -M viins '^H' backward-delete-char
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh --no-use"  # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#. "$(brew --prefix nvm)/nvm.sh"

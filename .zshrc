@@ -1,5 +1,5 @@
 # zmodload zsh/zprof
-eval $(docker-machine env blackbaud)
+if which jenv > /dev/null; then eval "$(jenv init - --no-rehash)"; fi
 
 source ~/.zsh_plugins.sh
 source ~/dotfiles/alias.zsh
