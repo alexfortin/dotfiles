@@ -30,5 +30,12 @@ brew cask install alfred
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 npm install --global pure-prompt
+
+## install fzf hotkeys
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+## In nvim run PlugInstall
+## symlink .gitconfig, .tmux.config, nvimrc -> .config/nvim/init.vim
 echo "Done"
 
