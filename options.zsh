@@ -1,4 +1,5 @@
-export PATH="/usr/local/bin:$PATH"
+# export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/node@16/bin:$PATH"
 
 # Completions
 autoload -Uz compinit promptinit; promptinit

@@ -16,17 +16,15 @@ brew install fasd
 brew install jenv
 brew install fzf
 brew install getantibody/tap/antibody
-brew cask install minikube
-brew cask install atom
-brew cask install firefox
-brew cask install intellij-idea
-brew cask install iterm2
-brew cask install virtualbox
-brew cask install slack
-brew cask install spotify
-brew cask install karabiner-elements
-brew cask install bettertouchtool
-brew cask install alfred
+brew install --cask minikube
+brew install --cask atom
+brew install --cask firefox
+brew install --cask intellij-idea
+brew install --cask iterm2
+brew install --cask slack
+brew install --cask spotify
+brew install --cask bettertouchtool
+brew install --cask alfred
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 npm install --global pure-prompt
@@ -36,6 +34,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 ## In nvim run PlugInstall
-## symlink .gitconfig, .tmux.config, nvimrc -> .config/nvim/init.vim
+### symlink .gitconfig, .tmux.config, nvimrc -> .config/nvim/init.vim
 echo "Done"
 
