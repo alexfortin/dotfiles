@@ -15,6 +15,7 @@ brew install tig
 brew install fasd
 brew install jenv
 brew install fzf
+brew install pure
 brew install getantibody/tap/antibody
 brew install --cask minikube
 brew install --cask atom
@@ -27,7 +28,6 @@ brew install --cask bettertouchtool
 brew install --cask alfred
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-npm install --global pure-prompt
 
 ## install fzf hotkeys
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
