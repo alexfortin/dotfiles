@@ -5,9 +5,6 @@ brew install tree
 brew install neovim
 brew install zsh
 brew install httpie
-brew install docker
-brew install docker-machine
-brew install mongodb
 brew install tmux
 brew install wget
 brew install azure-cli
@@ -22,7 +19,6 @@ brew install --cask atom
 brew install --cask firefox
 brew install --cask intellij-idea
 brew install --cask iterm2
-brew install --cask slack
 brew install --cask spotify
 brew install --cask bettertouchtool
 brew install --cask alfred

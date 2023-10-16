@@ -1,5 +1,7 @@
 # export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/node@16/bin:$PATH"
+# export PATH="/usr/local/opt/node@16/bin:$PATH"
+source ~/plugins/znap/znap.zsh  # Start Znap
+export LC_ALL=en_US.UTF-8
 
 # Completions
 autoload -Uz compinit promptinit; promptinit
@@ -8,8 +10,7 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
-prompt pure
-
+bindkey -M menuselect '^M' .accept-line
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
@@ -62,16 +63,32 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # fasd
-eval "$(fasd --init auto)"
-fasd_cache="$HOME/.fasd-cache"
-if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache"  ]; then
-  fasd --init auto >| "$fasd_cache"
-fi
-source "$fasd_cache"
-unset fasd_cache
+ znap eval fasd "$(fasd --init auto)"
+ fasd_cache="$HOME/.fasd-cache"
+ if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache"  ]; then
+   fasd --init auto >| "$fasd_cache"
+ fi
+ source "$fasd_cache"
+ unset fasd_cache
 
 bindkey -M viins '^?' backward-delete-char
 bindkey -M viins '^H' backward-delete-char
+
+zstyle ':znap:*' repos-dir ~/plugins
+znap prompt sindresorhus/pure
+znap source mafredri/zsh-async
+znap source zsh-users/zsh-completions
+znap source zsh-users/zsh-syntax-highlighting
+znap source zsh-users/zsh-history-substring-search
+
+znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
+
+znap function _pyenv pyenv "znap eval pyenv 'pyenv init - --no-rehash'"
+compctl -K    _pyenv pyenv
+
+znap install aureliojargas/clitest zsh-users/zsh-completions
+
+exec 2>/dev/ttys002 #stderr to console
 
 #export NVM_DIR="$HOME/.nvm"
 #. "$(brew --prefix nvm)/nvm.sh"
