@@ -1,4 +1,10 @@
-export HOMEBREW_PREFIX="$(brew --prefix)"
+if [[ -z "${HOMEBREW_PREFIX:-}" ]]; then
+    if [[ -d /opt/homebrew ]]; then
+        export HOMEBREW_PREFIX="/opt/homebrew"
+    else
+        export HOMEBREW_PREFIX="/usr/local"
+    fi
+fi
 export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 
@@ -31,6 +37,7 @@ setopt hist_reduce_blanks
 setopt inc_append_history
 setopt no_beep
 setopt share_history
+setopt append_history
 setopt noclobber
 bindkey "^R" history-incremental-search-backward
 unsetopt nomatch
@@ -38,19 +45,13 @@ unsetopt nomatch
 # Options
 setopt autocd
 setopt interactivecomments
-setopt auto_cd
 setopt cdable_vars
 setopt extended_glob
-setopt menu_complete
-setopt inc_append_history
-setopt share_history
-setopt append_history
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 setopt pushdsilent
 setopt auto_list
-setopt auto_menu
 setopt always_to_end
 
 # Vi mode

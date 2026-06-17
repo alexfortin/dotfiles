@@ -120,14 +120,5 @@ else
   echo "ℹ️  No macOS defaults script found or not executable."
 fi
 
-# --- Path corrections for tools used by your config ---------------------------
-# zoxide/fzf runtime paths (prefix-aware)
-if [[ -d "$BREW_PREFIX/opt/fzf" ]]; then
-  # Neovim uses lua config now; keep Zsh integration:
-  FZF_SHELL_DIR="$BREW_PREFIX/opt/fzf/shell"
-  [[ -f "$FZF_SHELL_DIR/key-bindings.zsh" ]] && source "$FZF_SHELL_DIR/key-bindings.zsh"
-  [[ -f "$FZF_SHELL_DIR/completion.zsh"   ]] && source "$FZF_SHELL_DIR/completion.zsh"
-fi
-
 echo "✅ Setup complete."
 
