@@ -1,0 +1,33 @@
+[user]
+	email = alex.fortin@blackbaud.com
+	name = Blackbaud-AlexFortin
+[core]
+	editor = nvim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status -s
+	ds = diff --staged
+	d = diff
+[push]
+	default = current 
+[pull]
+    default = current
+[maintenance]
+	repo = /Users/alex.fortin/plugins/fasd
+	repo = /Users/alex.fortin/plugins/znap
+	repo = /Users/alex.fortin/plugins/agnoster/agnoster-zsh-theme
+	repo = /Users/alex.fortin/plugins/junegunn/fzf
+	repo = /Users/alex.fortin/plugins/mafredri/zsh-async
+	repo = /Users/alex.fortin/plugins/marlonrichert/zsh-autocomplete
+	repo = /Users/alex.fortin/plugins/sindresorhus/pure
+	repo = /Users/alex.fortin/plugins/zsh-users/zsh-completions
+	repo = /Users/alex.fortin/plugins/zsh-users/zsh-history-substring-search
+	repo = /Users/alex.fortin/plugins/zsh-users/zsh-syntax-highlighting
+	repo = /Users/alex.fortin/plugins/aureliojargas/clitest
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
